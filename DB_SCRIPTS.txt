@@ -5,4 +5,16 @@ CREATE TABLE `user_login` (
   `password` varchar(25) NOT NULL,
   `status` int NOT NULL
 );
+
+
+CREATE TABLE `users` (
+  `id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(60) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `email` varchar(60) NOT NULL,
+  `contact_no` varchar(20) NOT NULL,
+  `status` int NOT NULL DEFAULT '1',
+  `type` int NOT NULL COMMENT '1.Admin, 2.Princi ,3.Teacher ,4.Student'
+);
+
 --------------------------------------------------------------------
